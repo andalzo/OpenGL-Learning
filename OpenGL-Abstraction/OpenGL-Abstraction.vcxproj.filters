@@ -20,6 +20,36 @@
     <ClCompile Include="Utility.cpp">
       <Filter>API</Filter>
     </ClCompile>
+    <ClCompile Include="Texture.cpp">
+      <Filter>API</Filter>
+    </ClCompile>
+    <ClCompile Include="vendor\stb_image.cpp">
+      <Filter>Vendor</Filter>
+    </ClCompile>
+    <ClCompile Include="vendor\imgui\imgui.cpp">
+      <Filter>Vendor\imgui</Filter>
+    </ClCompile>
+    <ClCompile Include="vendor\imgui\imgui_demo.cpp">
+      <Filter>Vendor\imgui</Filter>
+    </ClCompile>
+    <ClCompile Include="vendor\imgui\imgui_draw.cpp">
+      <Filter>Vendor\imgui</Filter>
+    </ClCompile>
+    <ClCompile Include="vendor\imgui\imgui_impl_glfw.cpp">
+      <Filter>Vendor\imgui</Filter>
+    </ClCompile>
+    <ClCompile Include="vendor\imgui\imgui_impl_opengl3.cpp">
+      <Filter>Vendor\imgui</Filter>
+    </ClCompile>
+    <ClCompile Include="vendor\imgui\imgui_tables.cpp">
+      <Filter>Vendor\imgui</Filter>
+    </ClCompile>
+    <ClCompile Include="vendor\imgui\imgui_widgets.cpp">
+      <Filter>Vendor\imgui</Filter>
+    </ClCompile>
+    <ClCompile Include="TestClearColor.cpp">
+      <Filter>Tests</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="IndexBuffer.h">
@@ -43,10 +73,58 @@
     <ClInclude Include="Utility.h">
       <Filter>API</Filter>
     </ClInclude>
+    <ClInclude Include="Texture.h">
+      <Filter>API</Filter>
+    </ClInclude>
+    <ClInclude Include="vendor\stb_image.h">
+      <Filter>Vendor</Filter>
+    </ClInclude>
+    <ClInclude Include="vendor\imgui\imconfig.h">
+      <Filter>Vendor\imgui</Filter>
+    </ClInclude>
+    <ClInclude Include="vendor\imgui\imgui.h">
+      <Filter>Vendor\imgui</Filter>
+    </ClInclude>
+    <ClInclude Include="vendor\imgui\imgui_impl_glfw.h">
+      <Filter>Vendor\imgui</Filter>
+    </ClInclude>
+    <ClInclude Include="vendor\imgui\imgui_impl_opengl3.h">
+      <Filter>Vendor\imgui</Filter>
+    </ClInclude>
+    <ClInclude Include="vendor\imgui\imgui_internal.h">
+      <Filter>Vendor\imgui</Filter>
+    </ClInclude>
+    <ClInclude Include="vendor\imgui\imstb_rectpack.h">
+      <Filter>Vendor\imgui</Filter>
+    </ClInclude>
+    <ClInclude Include="vendor\imgui\imstb_textedit.h">
+      <Filter>Vendor\imgui</Filter>
+    </ClInclude>
+    <ClInclude Include="vendor\imgui\imstb_truetype.h">
+      <Filter>Vendor\imgui</Filter>
+    </ClInclude>
+    <ClInclude Include="vendor\imgui\imgui_impl_opengl3_loader.h">
+      <Filter>Vendor\imgui</Filter>
+    </ClInclude>
+    <ClInclude Include="Test.h">
+      <Filter>Tests</Filter>
+    </ClInclude>
+    <ClInclude Include="TestClearColor.h">
+      <Filter>Tests</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="API">
       <UniqueIdentifier>{c861ecfd-5cf3-466f-b16d-935f2a4af1eb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Vendor">
+      <UniqueIdentifier>{ef68af49-e415-4495-a23b-140c4fb04304}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Vendor\imgui">
+      <UniqueIdentifier>{5ad01da2-cd09-4b18-8fcc-81514132f7c7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Tests">
+      <UniqueIdentifier>{c2250912-faa8-46d1-b81b-6ebbcc821a77}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
 </Project>
