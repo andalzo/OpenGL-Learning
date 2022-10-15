@@ -5,8 +5,11 @@
 class Texture
 {
 public:
+	Texture() = default;
 	Texture(const std::string& path);
 	~Texture();
+
+	void SetPath(const std::string& path);
 
 	void Bind(unsigned int slot = 0) const;
 	void UnBind() const;

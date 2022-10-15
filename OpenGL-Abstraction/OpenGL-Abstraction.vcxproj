@@ -155,6 +155,8 @@
     <ClCompile Include="main.cpp" />
     <ClCompile Include="Renderer.cpp" />
     <ClCompile Include="Shader.cpp" />
+    <ClCompile Include="Test.cpp" />
+    <ClCompile Include="TestMultipleObjects.cpp" />
     <ClCompile Include="TestClearColor.cpp" />
     <ClCompile Include="Texture.cpp" />
     <ClCompile Include="Utility.cpp" />
@@ -174,6 +176,7 @@
     <ClInclude Include="Renderer.h" />
     <ClInclude Include="Shader.h" />
     <ClInclude Include="Test.h" />
+    <ClInclude Include="TestMultipleObjects.h" />
     <ClInclude Include="TestClearColor.h" />
     <ClInclude Include="Texture.h" />
     <ClInclude Include="Utility.h" />

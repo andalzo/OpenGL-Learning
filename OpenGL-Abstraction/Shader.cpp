@@ -16,6 +16,13 @@ Shader::~Shader()
     GLCall(glDeleteProgram(m_RendererID));
 }
 
+void Shader::SetPath(const std::string& filepath)
+{
+    m_FilePath = filepath;
+    ShaderProgramSource source = ParseShader();
+    m_RendererID = CreateShader(source.VertexSource, source.FragmentSource);
+}
+
 void Shader::Bind() const
 {
     GLCall(glUseProgram(m_RendererID));
@@ -26,24 +33,43 @@ void Shader::UnBind() const
     GLCall(glUseProgram(0));
 }
 
-void Shader::SetUniform1i(const std::string& name, int v0)
+void Shader::SetUniform1i(const std::string& name, const int& value)
 {
-    GLCall(glUniform1i(GetUniformLocation(name), v0));
+    GLint location = GetUniformLocation(name);
+    GLCall(glUniform1i(location, value));
 }
 
-void Shader::SetUniform1f(const std::string& name, float v0)
+void Shader::SetUniform1f(const std::string& name, const float& value)
 {
-    GLCall(glUniform1f(GetUniformLocation(name), v0));
+    GLint location = GetUniformLocation(name);
+    GLCall(glUniform1f(location, value));
+}
+void Shader::SetUniform2f(const std::string& name, const glm::vec2& value)
+{
+    GLint location = GetUniformLocation(name);
+    GLCall(glUniform2f(location, value.x, value.y));
+}
+void Shader::SetUniform3f(const std::string& name, const glm::vec3& value)
+{
+    GLint location = GetUniformLocation(name);
+    GLCall(glUniform3f(location, value.x, value.y, value.z));
+}
+void Shader::SetUniform4f(const std::string& name, const glm::vec4& value)
+{
+    GLint location = GetUniformLocation(name);
+    GLCall(glUniform4f(location, value.x, value.y, value.z, value.w));
 }
 
-void Shader::SetUniform4f(const std::string& name, float v0, float v1, float v2, float v3)
+void Shader::SetUniformMat3(const std::string& name, const glm::mat3& matrix)
 {
-    GLCall(glUniform4f(GetUniformLocation(name), v0, v1, v2, v3));
+    GLint location = GetUniformLocation(name);
+    GLCall(glUniformMatrix3fv(location, 1, GL_FALSE, &matrix[0][0]));
+    
 }
-
-void Shader::SetUniformMat4f(const std::string& name, const glm::mat4& mat)
+void Shader::SetUniformMat4(const std::string& name, const glm::mat4& matrix)
 {
-    GLCall(glUniformMatrix4fv(GetUniformLocation(name), 1, GL_FALSE, &mat[0][0]));
+    GLint location = GetUniformLocation(name);
+    GLCall(glUniformMatrix4fv(location, 1, GL_FALSE, &matrix[0][0]));
 }
 
 int Shader::GetUniformLocation(const std::string& name)

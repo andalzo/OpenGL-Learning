@@ -4,6 +4,7 @@
 class IndexBuffer
 {
 public:
+	IndexBuffer() = default;
 	IndexBuffer(const unsigned int* data, unsigned int count);
 	~IndexBuffer();
 

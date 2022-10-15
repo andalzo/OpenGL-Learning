@@ -292,8 +292,8 @@ int main()
         glfwPollEvents();
     }
 
+    
     GLCall(glDeleteProgram(shader)); //We need to close gpu program context
-
     glfwTerminate();
     return 0;
 }
